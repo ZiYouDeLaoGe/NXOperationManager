@@ -3,7 +3,7 @@
 //  OAConnect
 //
 //  Created by 李仁兵 on 15/12/4.
-//  Copyright © 2015年 zengxiangrong. All rights reserved.
+//  Copyright © 2015年 李仁兵. All rights reserved.
 //
 
 #import "FileCacheManager.h"
@@ -109,6 +109,10 @@
             if (self.delegate && [self.delegate respondsToSelector:@selector(failedFileCache:)]) {
                 [self.delegate failedFileCache:@"数据存储失败"];
             }
+            return;
+        }
+        if (self.delegate && [self.delegate respondsToSelector:@selector(succedFileCache:)]) {
+            [self.delegate succedFileCache:filePath];
         }
         NSLog(@"filePath-------------------%@",filePath);
     }

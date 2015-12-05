@@ -3,7 +3,7 @@
 //  OAConnect
 //
 //  Created by 李仁兵 on 15/12/4.
-//  Copyright © 2015年 zengxiangrong. All rights reserved.
+//  Copyright © 2015年 李仁兵. All rights reserved.
 //
 
 #import "FileCacheOperation.h"
@@ -21,6 +21,7 @@ FileCacheManagerDelegate
 @property (nonatomic,strong) FileCacheManager * fileCacheManager;
 @property (nonatomic,assign) BOOL isSucced;
 @property (nonatomic,copy) NSString * cachePath;
+@property (nonatomic,copy) NSString * errorInfo;
 
 @end
 
@@ -48,7 +49,7 @@ FileCacheManagerDelegate
             }
         }else{
             if (failure) {
-                failure(weakSelf);
+                failure(weakSelf,weakSelf.errorInfo);
             }
         }
     }];
@@ -84,11 +85,12 @@ FileCacheManagerDelegate
 {
     self.isSucced = YES;
     self.cachePath = cachePath;
-    [self cancel];
+    [self finish];
 }
 
 - (void)failedFileCache:(NSString *)errorInfo
 {
+    self.errorInfo = errorInfo;
     self.isSucced = NO;
     [self cancel];
 }

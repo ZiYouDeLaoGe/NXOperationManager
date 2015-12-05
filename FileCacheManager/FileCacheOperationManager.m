@@ -3,7 +3,7 @@
 //  OAConnect
 //
 //  Created by 李仁兵 on 15/12/4.
-//  Copyright © 2015年 zengxiangrong. All rights reserved.
+//  Copyright © 2015年 李仁兵. All rights reserved.
 //
 
 #import "FileCacheOperationManager.h"
