@@ -9,6 +9,8 @@
 #import "ViewController.h"
 #import "FileCacheOperationManager.h"
 
+#import "SongCiCacheOperationManager.h"
+
 @interface ViewController ()
 {
     UILabel * _filePathLabel;
@@ -44,6 +46,29 @@
             _filePathLabel.text = errorInfo;
         });
     }];
+    
+    
+    NSString * content2 = @"少年听雨歌楼上。红烛昏罗帐。壮年听雨客舟中。江阔云低、断雁叫西风。\n而今听雨僧庐下。鬓已星星也。悲欢离合总无情。一任阶前、点滴到天明。";
+    FileCacheModel * fileCacheModel2 = [[FileCacheModel alloc] init];
+    fileCacheModel2.fileName = @"虞美人·听雨";
+    fileCacheModel2.fileData = [content2 dataUsingEncoding:NSUTF8StringEncoding];
+    fileCacheModel2.fileType = @"txt";
+    
+    
+    //二次封装应用
+    [[SongCiCacheOperationManager sharedSongciCacheOperationManager] cacheFileWith:fileCacheModel success:^(FileCacheOperation *operation, NSString *filePath) {
+        NSLog(@"二次封装----%@",filePath);
+    } failure:^(FileCacheOperation *operation, NSString *errorInfo) {
+        NSLog(@"二次封装----%@",errorInfo);
+    }];
+    
+    [[SongCiCacheOperationManager sharedSongciCacheOperationManager] cacheFileWith:fileCacheModel2 success:^(FileCacheOperation *operation, NSString *filePath) {
+        NSLog(@"二次封装----%@",filePath);
+    } failure:^(FileCacheOperation *operation, NSString *errorInfo) {
+        NSLog(@"二次封装----%@",errorInfo);
+    }];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {

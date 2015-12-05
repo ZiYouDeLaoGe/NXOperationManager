@@ -17,6 +17,8 @@
 		F254EE3C1C12BEEB00EC4F40 /* FileCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = F254EE361C12BEEB00EC4F40 /* FileCacheOperation.m */; };
 		F254EE3D1C12BEEB00EC4F40 /* FileCacheOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F254EE381C12BEEB00EC4F40 /* FileCacheOperationManager.m */; };
 		F254EE3E1C12BEEB00EC4F40 /* NXOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = F254EE3A1C12BEEB00EC4F40 /* NXOperation.m */; };
+		F254EE431C12D79B00EC4F40 /* SongCiDataCacheConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = F254EE421C12D79B00EC4F40 /* SongCiDataCacheConfiguration.m */; };
+		F254EE461C12D95C00EC4F40 /* SongCiCacheOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F254EE451C12D95C00EC4F40 /* SongCiCacheOperationManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,10 @@
 		F254EE381C12BEEB00EC4F40 /* FileCacheOperationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileCacheOperationManager.m; sourceTree = "<group>"; };
 		F254EE391C12BEEB00EC4F40 /* NXOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NXOperation.h; path = ../NXOperation.h; sourceTree = "<group>"; };
 		F254EE3A1C12BEEB00EC4F40 /* NXOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NXOperation.m; path = ../NXOperation.m; sourceTree = "<group>"; };
+		F254EE411C12D79B00EC4F40 /* SongCiDataCacheConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SongCiDataCacheConfiguration.h; sourceTree = "<group>"; };
+		F254EE421C12D79B00EC4F40 /* SongCiDataCacheConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SongCiDataCacheConfiguration.m; sourceTree = "<group>"; };
+		F254EE441C12D95C00EC4F40 /* SongCiCacheOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SongCiCacheOperationManager.h; sourceTree = "<group>"; };
+		F254EE451C12D95C00EC4F40 /* SongCiCacheOperationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SongCiCacheOperationManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +79,7 @@
 		F254EE1A1C12BE8600EC4F40 /* CacheFileDemo */ = {
 			isa = PBXGroup;
 			children = (
+				F254EE401C12D6A100EC4F40 /* SongCiDataCache */,
 				F254EE1E1C12BE8600EC4F40 /* AppDelegate.h */,
 				F254EE1F1C12BE8600EC4F40 /* AppDelegate.m */,
 				F254EE211C12BE8600EC4F40 /* ViewController.h */,
@@ -106,6 +113,17 @@
 			);
 			name = FileCacheManager;
 			path = ../FileCacheManager;
+			sourceTree = "<group>";
+		};
+		F254EE401C12D6A100EC4F40 /* SongCiDataCache */ = {
+			isa = PBXGroup;
+			children = (
+				F254EE411C12D79B00EC4F40 /* SongCiDataCacheConfiguration.h */,
+				F254EE421C12D79B00EC4F40 /* SongCiDataCacheConfiguration.m */,
+				F254EE441C12D95C00EC4F40 /* SongCiCacheOperationManager.h */,
+				F254EE451C12D95C00EC4F40 /* SongCiCacheOperationManager.m */,
+			);
+			path = SongCiDataCache;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,7 +197,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F254EE3B1C12BEEB00EC4F40 /* FileCacheManager.m in Sources */,
+				F254EE461C12D95C00EC4F40 /* SongCiCacheOperationManager.m in Sources */,
 				F254EE3E1C12BEEB00EC4F40 /* NXOperation.m in Sources */,
+				F254EE431C12D79B00EC4F40 /* SongCiDataCacheConfiguration.m in Sources */,
 				F254EE231C12BE8600EC4F40 /* ViewController.m in Sources */,
 				F254EE201C12BE8600EC4F40 /* AppDelegate.m in Sources */,
 				F254EE1D1C12BE8600EC4F40 /* main.m in Sources */,
