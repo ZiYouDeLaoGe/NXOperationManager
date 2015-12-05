@@ -15,16 +15,16 @@ fileCacheModel.fileType = @"txt";
 
 ###建立**FileCacheOperationManager**对象###
 **FileCacheOperationManager** * fileCacheOperationManager =[[**FileCacheOperationManager** alloc] initWithSearchPathModel:NXSearchPathModelCache rootFilePath:@"宋词.苏轼"];  
-[fileCacheOperationManager cacheFileWith:fileCacheModel success:^(FileCacheOperation *operation, NSString *filePath) {  
-NSLog(@"%@",filePath);  
-dispatch_async(dispatch_get_main_queue(), ^{  
-_filePathLabel.text = filePath;//根据需求是否切换到主线程  
-});  
+>[fileCacheOperationManager cacheFileWith:fileCacheModel success:^(FileCacheOperation *operation, NSString *filePath) {  
+>>NSLog(@"%@",filePath);  
+>>dispatch_async(dispatch_get_main_queue(), ^{  
+>>>_filePathLabel.text = filePath;//根据需求是否切换到主线程  
+>>});  
 } failure:^(FileCacheOperation *operation, NSString *errorInfo) {  
-NSLog(@"%@",errorInfo);  
-dispatch_async(dispatch_get_main_queue(), ^{  
-_filePathLabel.text = errorInfo;  
-});  
+>>NSLog(@"%@",errorInfo);  
+>>dispatch_async(dispatch_get_main_queue(), ^{  
+>>>_filePathLabel.text = errorInfo;  
+>>});  
 }];  
 可以进行二次封装，类似于AFNetworking
 
