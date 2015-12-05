@@ -25,6 +25,7 @@
  @param cacheModel:FileCacheModel,文件数据模型;
  @param success:(void (^)(FileCacheOperation *operation, NSString * filePath)),处理成功数据回调;
  @param failure:(void (^)(FileCacheOperation *operation)),处理失败回调;
+ @return FileCacheOperation *,返回文件缓存线程
  */
-- (FileCacheOperation *)cacheFileWith:(FileCacheModel *)fileCacheModel success:(void (^)(FileCacheOperation *operation, NSString * filePath))success failure:(void (^)(FileCacheOperation *operation))failure;
+- (FileCacheOperation *)cacheFileWith:(FileCacheModel *)fileCacheModel success:(void (^)(FileCacheOperation *operation, NSString * filePath))success failure:(void (^)(FileCacheOperation *operation, NSString * errorInfo))failure;
 @end

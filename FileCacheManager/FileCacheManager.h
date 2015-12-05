@@ -23,6 +23,7 @@ typedef NS_ENUM(NSInteger,NXSearchPathModel)
 
 @protocol FileCacheManagerDelegate <NSObject>
 
+@required
 /*!
  @method - (NXSearchPathModel)searchPathModel;
  @abstract 存放模型
@@ -37,6 +38,7 @@ typedef NS_ENUM(NSInteger,NXSearchPathModel)
  */
 - (NSString *)rootFilePath;
 
+@optional
 /*!
  @method - (void)succedFileCache;
  @abstract 缓存文件成功
@@ -50,7 +52,7 @@ typedef NS_ENUM(NSInteger,NXSearchPathModel)
  @abstract 缓存文件失败
  @return void
  */
-- (void)failedFileCache;
+- (void)failedFileCache:(NSString *)errorInfo;
 @end
 
 @interface FileCacheManager : NSObject

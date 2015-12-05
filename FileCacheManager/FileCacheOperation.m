@@ -38,7 +38,7 @@ FileCacheManagerDelegate
     return self;
 }
 
-- (void)setCompletionBlockWithSuccess:(void (^)(FileCacheOperation *operation, NSString * filePath))success failure:(void (^)(FileCacheOperation *operation))failure
+- (void)setCompletionBlockWithSuccess:(void (^)(FileCacheOperation *operation, NSString * filePath))success failure:(void (^)(FileCacheOperation *operation ,NSString * errorInfo))failure
 {
     __weak typeof(self) weakSelf = self;
     [self setCompletionBlock:^{
@@ -87,7 +87,7 @@ FileCacheManagerDelegate
     [self cancel];
 }
 
-- (void)failedFileCache
+- (void)failedFileCache:(NSString *)errorInfo
 {
     self.isSucced = NO;
     [self cancel];

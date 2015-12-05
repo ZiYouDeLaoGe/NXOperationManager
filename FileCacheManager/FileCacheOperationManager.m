@@ -29,7 +29,7 @@
     return self;
 }
 
-- (FileCacheOperation *)cacheFileWith:(FileCacheModel *)fileCacheModel success:(void (^)(FileCacheOperation *, NSString *))success failure:(void (^)(FileCacheOperation *))failure
+- (FileCacheOperation *)cacheFileWith:(FileCacheModel *)fileCacheModel success:(void (^)(FileCacheOperation *, NSString *))success failure:(void (^)(FileCacheOperation *, NSString * errorInfo))failure
 {
     FileCacheOperation * fileCacheOperation = [[FileCacheOperation alloc] initWithFileCacheModel:fileCacheModel searchPathModel:_searchPathModel rootFilePath:_rootFilePath];
     [fileCacheOperation setCompletionBlockWithSuccess:success failure:failure];

@@ -11,6 +11,9 @@
 #import "FileCacheManager.h"
 
 @interface FileCacheOperation : NXOperation
+
 - (instancetype)initWithFileCacheModel:(FileCacheModel *)fileCacheModel searchPathModel:(NXSearchPathModel)searchPathModel rootFilePath:(NSString *)rootFilePath;
-- (void)setCompletionBlockWithSuccess:(void (^)(FileCacheOperation *operation, NSString * filePath))success failure:(void (^)(FileCacheOperation *operation))failure;
+
+
+- (void)setCompletionBlockWithSuccess:(void (^)(FileCacheOperation *operation, NSString * filePath))success failure:(void (^)(FileCacheOperation *operation, NSString * errorInfo))failure;
 @end
