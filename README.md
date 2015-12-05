@@ -2,6 +2,8 @@
 多线程异步处理数据
 
 ###FileCacheManager使用说明###
+- `文件数据少则几十k大则上百兆，文件缓存处理不好严重影响用户体验`
+- `FileCacheManager能够异步处理多个文件而不影响界面交互`
 ####FileCacheManager####
 - `FileCacheManager`
 - `FileCacheOperation`
