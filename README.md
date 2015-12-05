@@ -35,6 +35,6 @@ FileCacheOperationManager * fileCacheOperationManager =[[FileCacheOperationManag
     });
 }];
 ```
-注：可以进行二次封装，类似于AFNetworking
+注：可以进行二次封装，类似于AFNetworking;rootFilePath是存储目录路径，多层次包含用‘.’隔开，例如本例子中**‘宋词.苏轼’**转化为存储目录为**/宋词/苏轼**
 
 
