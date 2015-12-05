@@ -39,7 +39,7 @@ FileCacheOperationManager * fileCacheOperationManager =[[FileCacheOperationManag
 
 ####二次封装说明####
 - `SongCiDataCacheConfiguration:来封装存储模式、根目录`
-- `SongCiCacheOperationManager:继承于FileCacheOperationManager，单例`
+- `SongCiCacheOperationManager:继承于FileCacheOperationManager，单例`  
 注：这里用一个例子来说明二次封装  
 ```objective-c
 [[SongCiCacheOperationManager sharedSongciCacheOperationManager] cacheFileWith:fileCacheModel success:^(FileCacheOperation *operation, NSString *filePath) {
